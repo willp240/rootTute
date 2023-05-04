@@ -19,7 +19,6 @@ A solution to the project can be found in the project directory.
 
 <h2> Exercises </h2>
 
-Exercises:
 
 
 
