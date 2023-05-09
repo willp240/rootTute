@@ -4,10 +4,9 @@
 void exercise3Canvas()
 {
 //=========Macro generated from canvas: c1/c1
-//=========  (Mon May  8 15:02:06 2023) by ROOT version 6.26/06
+//=========  (Mon May  8 23:23:32 2023) by ROOT version 6.26/06
    TCanvas *c1 = new TCanvas("c1", "c1",0,53,1000,800);
    gStyle->SetOptStat(0);
-   gStyle->SetOptTitle(0);
    c1->Range(-17.5,-0.02341452,157.5,0.2107307);
    c1->SetFillColor(0);
    c1->SetBorderMode(0);
@@ -295,6 +294,15 @@ void exercise3Canvas()
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
    leg->Draw();
+   
+   TPaveText *pt = new TPaveText(0.4444088,0.94,0.5555912,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   TText *pt_LaTex = pt->AddText("gaus");
+   pt->Draw();
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
