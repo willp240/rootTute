@@ -1,4 +1,4 @@
-# rootTute
+# ROOTTute
 ROOT Tutorial for 2023 EIEIO Workshop
 
 <h2> Examples </h2>
@@ -19,7 +19,21 @@ A solution to the project can be found in the project directory.
 
 <h2> Exercises </h2>
 
+<h3> Exercise 1 </h3>
+# Getting used to the ROOT command line
+Open ROOT
+Declare some variables and do some calculations
+Draw a TCanvas
+Open the TBrowser and explore!
 
+<h3> Exercise 2 </h3>
+# Writing and running a basic macro
+In a macro, declare a histogram
+Fill it with some values, in any way you choose
+Declare a new TFile, and save the histogram
+Open the new ROOT file and draw the histogram
+Play with the aesthetics of the plot via the GUI
 
+<h3> Exercise 3 </h3>
 
 <h2> Project </h2>
