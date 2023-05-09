@@ -11,21 +11,21 @@ void partA()
   double pos_resolution = 100;
   double e_resolution = 0.03;
   double res_scale = 0.02; // How the resolutions scale as function of true radius
-  
+
   TRandom3* random = new TRandom3();
-  
+
   TTree* t = new TTree("eve_tree","Event Tree");
   //TFile* f = new TFile("partA.root","RECREATE");
   // For part D we will rerun this with:
   TFile* f = new TFile("partA_supressed_bg.root","RECREATE");
-  
+
   // Declare the variables we want to save in our tree
   double true_x;
   double true_y;
   double true_z;
   double true_r;
   double true_e;
-  
+
   double recon_x;
   double recon_y;
   double recon_z;
@@ -33,7 +33,7 @@ void partA()
   double recon_e;
 
   bool signal;
-  
+
   t->Branch("true_x", &true_x, "true_x/D");
   t->Branch("true_y", &true_y, "true_y/D");
   t->Branch("true_z", &true_z, "true_z/D");
@@ -71,7 +71,7 @@ void partA()
     recon_e = random->Gaus(true_e, res_scale*true_r + e_resolution*true_e );
 
     signal = true;
-    
+
     t->Fill();
   }
 
@@ -96,7 +96,7 @@ void partA()
     recon_e = random->Gaus(true_e, res_scale*true_r + e_resolution*true_e );
 
     signal = false;
-    
+
     t->Fill();
   }
 

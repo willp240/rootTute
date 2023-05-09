@@ -1,7 +1,7 @@
 
 void partC()
 {
-  
+
   gStyle->SetOptStat(0);
 
   int num_points = 100; // Number of radial cuts we will try

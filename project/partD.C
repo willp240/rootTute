@@ -1,7 +1,7 @@
 
 void partD()
 {
-  
+
   gStyle->SetOptStat(0);
 
   int num_points = 100; // Number of radial cuts we will try
@@ -13,7 +13,7 @@ void partD()
   
   TFile *f2 = TFile::Open("partA_supressed_bg.root");
   TTree *t2 = (TTree*)f2->Get("eve_tree");
-  
+
   TCanvas *c1 = new TCanvas("c1", "c1", 1000, 800);
   c1->SetFrameLineWidth(2);
   c1->SetGrid(1);
@@ -59,7 +59,7 @@ void partD()
     else
       tot_signal = h_signal->Integral();
     cut = Form("signal == 1 && recon_r < %f", r_cut);
-    
+
     t1->Draw("true_r", cut);
     TH1* h_signal_cut = (TH1*) gPad->GetListOfPrimitives()->FindObject("htemp");
     int	accepted_signal;

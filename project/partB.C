@@ -1,9 +1,9 @@
 
 void partB()
 {
-  
+
   gStyle->SetOptStat(0);
-  
+
   TFile *f1 = TFile::Open("partA.root");
   // For part D we can rerun this with:
   // TFile *f1 = TFile::Open("partA_supressed_bg.root");
@@ -34,7 +34,7 @@ void partB()
   c2->SetFrameLineWidth(2);
   c2->SetGrid(1);
   c2->cd();
-  
+
   t1->Draw("true_r", "signal == 0");
   TH1* h_bg_true_r = (TH1*) gPad->GetListOfPrimitives()->FindObject("htemp");
   h_bg_true_r->GetXaxis()->SetTitle("True Radius, mm");
@@ -46,7 +46,7 @@ void partB()
   // Print this canvas to the file also
   c2->Print(output_filename);
 
-  
+
   //////// True vs reconstructed radius
   TCanvas *c3 = new TCanvas("c3", "c3", 1000, 800);
   c3->SetRightMargin(0.13);
@@ -62,7 +62,7 @@ void partB()
 
   // Print this canvas to the file also
   c3->Print(output_filename);
-  
+
 
   //////// Fractional error in energy reconstruction as a function of true energy
   TCanvas *c4 = new TCanvas("c4", "c4", 1000, 800);
@@ -81,5 +81,5 @@ void partB()
   c4->Print(output_filename);
   // And close the pdf file with the ] suffix
   c4->Print(output_filename + "]");
-  
+
 }
