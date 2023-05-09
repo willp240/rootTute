@@ -43,14 +43,14 @@ void exercise4( )
       h_diff->SetBinContent(i_bin, diff_val/data_uncertainty);
     }
 
-  // Make one canvas with three pads
+  // Make three pads to draw on the canvas
   double uppermin = 0.35;
   double middlemin = 0.237;
   TPad *lower = new TPad("lower", "pad", 0, 0, 1, middlemin);
   TPad *middle = new TPad("middle", "pad", 0, middlemin, 1, uppermin);
   TPad *upper = new TPad("upper", "pad", 0, uppermin, 1, 1);
 
-  // Some drar options for these pads
+  // Some draw options for these pads
   upper->SetBottomMargin(0.0);
   upper->SetFrameLineWidth(2);
   upper->SetGrid(1);
@@ -68,7 +68,7 @@ void exercise4( )
   lower->Draw();
   c2->cd();
 
-  // Set sxis ranges for ratio plot
+  // Set axis ranges for ratio plot
   h_ratio->GetYaxis()->SetRangeUser(0.7,1.3);
   h_ratio->GetXaxis()->SetRangeUser(0,2);
   // Set axis ranges for difference plot
@@ -147,4 +147,3 @@ void exercise4( )
 
   return;
 }
-
