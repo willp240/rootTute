@@ -78,7 +78,7 @@ void exercise4( )
   // Draw difference plot
   lower->cd();
   h_diff->SetLineWidth(2);
-  h_diff->SetLineColor(kRed);
+  h_diff->SetLineColor(kBlue);
   h_diff->SetTitle("");
   h_diff->GetXaxis()->SetTitle("Energy (GeV)");
   h_diff->GetYaxis()->SetTitle("#Delta/#delta");
@@ -95,13 +95,13 @@ void exercise4( )
   // Draw a line at y = 0
   TLine* l1 = new TLine(0,0,2.0,0);
   l1->SetLineWidth(2);
-  l1->SetLineColor(kBlue);
+  l1->SetLineColor(kRed);
   l1->Draw("same");
  
   // Draw ratio plot
   middle->cd();
   h_ratio->SetTitle("");
-  h_ratio->SetLineColor(kRed);
+  h_ratio->SetLineColor(kBlue);
   h_ratio->SetLineWidth(2);
   h_ratio->GetYaxis()->SetTitle("Ratio");
   h_ratio->GetYaxis()->CenterTitle();
@@ -115,7 +115,7 @@ void exercise4( )
   // Draw a line at y = 1
   TLine* l2 = new TLine(0,1.00,2.0,1.0);
   l2->SetLineWidth(2);
-  l2->SetLineColor(kBlue);
+  l2->SetLineColor(kRed);
   l2->Draw("same");
   
   // Draw the top plot
