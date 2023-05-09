@@ -1,10 +1,10 @@
 
 void exampleTGraph( ){
-  
+
   TGraph* g = new TGraph();
 
   int npoints = 20;
-  
+
   for(int ipoint = 0; ipoint < npoints; ipoint++) {
 
     double x = ipoint;

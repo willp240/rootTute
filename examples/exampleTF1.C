@@ -9,7 +9,7 @@ void exampleTF1( ){
   f2->SetParameter(1, 5.); // Set mean of gaus
   f2->SetParameter(2, 2.); // Set wdith of gauus
   f2->SetLineColor(kBlue);
-  
+
   f1->Draw();
   f2->Draw("same");
 }

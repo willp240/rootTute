@@ -11,11 +11,11 @@ void exampleFit( ){
     h1->SetBinContent(ibin, y);
   }
 
-  
+
   TF1* f1 = new TF1("f1","pol2", 0., 10.);
   f1->SetLineColor(kRed);
-    
-  h1->Fit("f1");
+
+  h1->Fiit("f1");
   h1->Draw();
   f1->Draw("same");
 }

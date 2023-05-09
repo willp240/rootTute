@@ -13,7 +13,7 @@ void exercise5( ){
   TFile* f = new TFile("exercise5.root","RECREATE");
   t->Write();
 
-  
+
   // Now open that file and plot some correlations:
 
   // > root -l exercise5Tree.root

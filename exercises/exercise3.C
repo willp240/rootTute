@@ -66,5 +66,5 @@ void exercise3()
   // And finally, save as C file and PDF
   c1->SaveAs("./exercise3Canvas.pdf");
   c1->SaveAs("./exercise3Canvas.C");
-  
+
 }

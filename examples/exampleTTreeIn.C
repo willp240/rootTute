@@ -4,7 +4,7 @@ void exampleTTreeIn( ){
   TFile *f1 = TFile::Open("outfile2.root");
 
   TTree *t1 = (TTree*)f1->Get("eve_tree");
-  
+
   float x,y,z;
 
   t1->SetBranchAddress("x", &x);
@@ -17,5 +17,5 @@ void exampleTTreeIn( ){
   }
 
   t1->Draw("y", "z>1");
-  
+
 }

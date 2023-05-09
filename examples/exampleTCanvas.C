@@ -3,7 +3,7 @@ void exampleTCanvas( ){
 
   TCanvas* c1 = new TCanvas("cname", "ctitle", 600, 1500);
   c1->Divide(1,2);
-  
+
   TH2D* h1 = new TH2D("hname", "htitle", 20, -10, 10, 20, -10, 10);
 
   for(int xbin = 1; xbin <= 20; xbin++) {
@@ -13,7 +13,6 @@ void exampleTCanvas( ){
       double y = h1->GetYaxis()->GetBinCenter(ybin);
       
       double r = TMath::Sqrt(x*x + y*y);
-    
 
       h1->SetBinContent(xbin, ybin, r);
 

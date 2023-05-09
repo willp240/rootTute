@@ -1,6 +1,6 @@
 
 void exampleTH2D( ){
-  
+
   TH2D* h1 = new TH2D("hname", "htitle", 20, -10, 10, 20, -10, 10);
 
   for(int xbin = 1; xbin <= h1->GetXaxis()->GetNbins(); xbin++) {

@@ -24,7 +24,7 @@ void exercise4( )
     h_data->SetBinError(i_bin+1, TMath::Sqrt(data[i_bin]));
     h_MC->SetBinContent(i_bin+1, mc[i_bin]);
   }
-  
+
   // First clone the data histograms for the ratio & difference plots
   TH1D *h_ratio = (TH1D*)h_data->Clone("h_ratio");   
   TH1D *h_diff = (TH1D*)h_data->Clone("h_diff");
@@ -117,7 +117,7 @@ void exercise4( )
   l2->SetLineWidth(2);
   l2->SetLineColor(kRed);
   l2->Draw("same");
-  
+
   // Draw the top plot
   upper->cd();
   upper->SetTitle("Data-MC Comparison");

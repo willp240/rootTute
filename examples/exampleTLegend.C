@@ -5,7 +5,7 @@ void exampleTLegend( ){
   gStyle->SetOptStat(0);
   c1->SetFrameLineWidth(2);
   c1->SetGrid(1);
-  
+
   TH1D* h1 = new TH1D("h1", "h1", 10, 0, 10);
 
   for(int ibin = 1; ibin <= h1->GetXaxis()->GetNbins(); ibin++) {
@@ -16,7 +16,7 @@ void exampleTLegend( ){
     h1->SetBinContent(ibin, y);
   }
 
-  
+
   TF1* f1 = new TF1("f1","pol2", 0., 10.);
   f1->SetLineColor(kRed);
   f1->SetLineWidth(2);
@@ -28,15 +28,15 @@ void exampleTLegend( ){
   leg->AddEntry(h1, "Histogram", "l");
   leg->AddEntry(f1, "Fitted Function", "l");
   leg->SetLineWidth(2);
-  
+
   h1->GetXaxis()->SetTitle("X Values");
   h1->GetYaxis()->SetTitle("Y Values");
   h1->SetTitle("Example of Fitting a 2nd Order Polynomial to a Histogram");
   h1->SetLineWidth(2);
-  
+
   h1->Fit("f1");
   h1->Draw();
   f1->Draw("same");
   leg->Draw("same");
-  
+
 }

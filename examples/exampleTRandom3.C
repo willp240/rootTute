@@ -11,5 +11,5 @@ void exampleTRandom3( ){
     std::cout << g << " " << r << std::endl;
 
   }
-  
+
 }
