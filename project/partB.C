@@ -9,6 +9,7 @@ void partB()
   // TFile *f1 = TFile::Open("partA_supressed_bg.root");
   TTree *t1 = (TTree*)f1->Get("eve_tree");
 
+  TString output_filename = "partBCanvas.pdf";
 
   //////// Radial distribution of signal events
   TCanvas *c1 = new TCanvas("c1", "c1", 1000, 800);
@@ -22,6 +23,10 @@ void partB()
   h_signal_true_r->SetLineWidth(2);
   h_signal_true_r->GetYaxis()->SetTitleOffset(1.4);
 
+  // To save multiple canvases to a single pdf, first open the PDF with the [ suffix
+  c1->Print(output_filename + "[");
+  // Now print the first canvas we want to the file
+  c1->Print(output_filename);
 
   //////// Radial distribution of background events
   TCanvas *c2 = new TCanvas("c2", "c2", 1000, 800);
@@ -38,6 +43,8 @@ void partB()
   h_bg_true_r->SetLineWidth(2);
   h_bg_true_r->GetYaxis()->SetTitleOffset(1.4);
 
+  // Print this canvas to the file also
+  c2->Print(output_filename);
 
   
   //////// True vs reconstructed radius
@@ -53,7 +60,9 @@ void partB()
   h_true_recon_r->GetYaxis()->SetTitle("Reconstructed Radius, mm");
   h_true_recon_r->GetYaxis()->SetTitleOffset(1.4);
 
-
+  // Print this canvas to the file also
+  c3->Print(output_filename);
+  
 
   //////// Fractional error in energy reconstruction as a function of true energy
   TCanvas *c4 = new TCanvas("c4", "c4", 1000, 800);
@@ -67,5 +76,10 @@ void partB()
   h_true_recon_e->GetXaxis()->SetTitle("True Radius, mm");
   h_true_recon_e->GetYaxis()->SetTitle("(Reconstructed E - True E) / True E");
   h_true_recon_e->GetYaxis()->SetTitleOffset(1.4);
+
+  // Print this canvas to the file also
+  c4->Print(output_filename);
+  // And close the pdf file with the ] suffix
+  c4->Print(output_filename + "]");
   
 }
