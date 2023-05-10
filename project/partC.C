@@ -43,8 +43,8 @@ void partC()
       tot_signal = 0;}
     else
       tot_signal = h_signal->Integral();
+
     cut = Form("signal == 1 && recon_r < %f", r_cut);
-    
     t1->Draw("true_r", cut);
     TH1* h_signal_cut = (TH1*) gPad->GetListOfPrimitives()->FindObject("htemp");
     int	accepted_signal;
