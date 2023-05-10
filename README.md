@@ -77,7 +77,7 @@ This is a bonus exercise in case we run out of material. The idea is to collect 
 &emsp;- But radially drops off as 1/r^2 away from the edge of the detector. Maybe there’s some external radiation that leaches into the target mass but only penetrates so far <br>
 - Now let’s generate some reconstructed values <br>
 &emsp;- Assume a position resolution of 100 mm in each coordinate <br>
-&emsp;- Assume an energy resolution of 5 % <br>
+&emsp;- Assume an energy resolution of 3 % <br>
 &emsp;- What if the resolution is a weak function of the radius? <br>
 &emsp;- This smearing of the true values with the width of the resolution is a common way to account for detector effects in simulation
 - Now repeat for 100,000 events and save these values in a TTree in a file <br>
